@@ -51,11 +51,19 @@ html, body {
   }
 }
 
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
 .Nav {
   background-color: transparent;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-left: 2%;
+  padding-left: min(4%, 40px);
   position: absolute;
   top: 0;
   left: 0;
@@ -63,4 +71,22 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between; 
+}
+
+.spotlight-logo {
+  width: 150%;
+  height: auto;
+}
+
+.right-nav-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav-item {
+  color: white;
+  display: inline-block;
+  font-weight: 700;
+  padding-left: 2%;
+  padding-right: 2%;
 }

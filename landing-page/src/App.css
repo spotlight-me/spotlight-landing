@@ -90,3 +90,10 @@ html, body {
   padding-left: 2%;
   padding-right: 2%;
 }
+
+.reset-link {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  font-size: inherit;
+}

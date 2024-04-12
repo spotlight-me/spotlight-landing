@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Nav from './Nav';
-import { Application } from '@splinetool/runtime';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import FAQ from './FAQ';
 
 function App() {
-  useEffect(() => {
-    const canvas = document.getElementById('canvas3d');
-    
-    console.log('Canvas:', canvas);
-    if (canvas) {
-      const app = new Application(canvas);
-      app.load('https://prod.spline.design/1q1Z0dMWvfM2Ca2N/scene.splinecode');
-    } else {
-      console.error('Canvas element not found');
-    }
-  }, []);
-
   return (
-    <div className="App">
-      <Nav />
-      <canvas id="canvas3d" style={{ width: '100vw', height: '100vh' }}></canvas>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/faq" element={<FAQ />} />
+      </Routes>
+    </Router>
   );
 }
 

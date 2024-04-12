@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.Nav {
+  background-color: black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}

@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
 import Nav from './Nav';
+import { Application } from '@splinetool/runtime';
 
 function App() {
+  useEffect(() => {
+    const canvas = document.getElementById('canvas3d');
+    
+    console.log('Canvas:', canvas);
+    if (canvas) {
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/1q1Z0dMWvfM2Ca2N/scene.splinecode');
+    } else {
+      console.error('Canvas element not found');
+    }
+  }, []);
+
   return (
     <div className="App">
       <Nav />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <canvas id="canvas3d" style={{ width: '100vw', height: '100vh' }}></canvas>
     </div>
   );
 }

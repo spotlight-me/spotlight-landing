@@ -97,3 +97,12 @@ html, body {
   background: none;
   font-size: inherit;
 }
+
+.faq {
+  background-color: black;
+}
+
+.faq-page-title {
+  color: white;
+  margin-bottom: 2vw;
+}

@@ -16,7 +16,7 @@ const Home = () => {
       }, []);
     
     return (
-    <div className="App">
+    <div className="App home">
         <Nav />
         <canvas id="canvas3d" style={{ width: '100vw', height: '100vh' }}></canvas>
     </div>

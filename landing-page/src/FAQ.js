@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import Nav from './Nav';
+import Dropdown from './Dropdown';
+import { Link } from 'react-router-dom';
 import { Application } from '@splinetool/runtime';
+import SpotlightLogo from './SpotlightLogo.svg';
 
 const FAQ = () => {
     useEffect(() => {
@@ -16,9 +18,11 @@ const FAQ = () => {
       }, []);
 
     return (
-    <div className="App">
-        <Nav />
-        <canvas id="canvas3d" style={{ width: '100vw', height: '100vh' }}></canvas>
+    <div className="App faq">
+        <nav className='Nav'>
+            <Link to="/"><img src={SpotlightLogo} className="spotlight-logo" alt="spotlight logo" /></Link>
+        </nav>
+        <Dropdown />
     </div>
     )
 }
